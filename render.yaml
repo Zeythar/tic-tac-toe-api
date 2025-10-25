@@ -4,16 +4,15 @@ services:
     runtime: docker
     region: oregon # Change to your preferred region (oregon, frankfurt, singapore, etc.)
     plan: free # or 'starter', 'standard', etc.
-    dockerfilePath: TicTacToeApi/Dockerfile
-    dockerContext: .
+    # Dockerfile is now at the repository root
     envVars:
-      - key: ASPNETCORE_ENVIRONMENT
-        value: Production
+   - key: ASPNETCORE_ENVIRONMENT
+   value: Production
       # IMPORTANT: Replace with your actual frontend URL after deployment
       - key: AllowedOrigins__0
         value: https://your-frontend-app.onrender.com
       # Add additional origins as needed:
-      # - key: AllowedOrigins__1
+    # - key: AllowedOrigins__1
       #   value: https://another-domain.com
     # Optional: Add health check (SignalR negotiate endpoint)
     # healthCheckPath: /gameHub/negotiate

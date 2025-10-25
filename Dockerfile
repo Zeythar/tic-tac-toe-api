@@ -26,10 +26,5 @@ WORKDIR /app
 # Copy published app
 COPY --from=publish /app/publish .
 
-# Render.com provides PORT environment variable dynamically
-# The app will listen on the port specified by $PORT or default to 8080
-ENV ASPNETCORE_URLS=http://+:8080
-EXPOSE 8080
-
 # Run the application
 ENTRYPOINT ["dotnet", "TicTacToeApi.dll"]

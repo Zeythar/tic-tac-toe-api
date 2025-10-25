@@ -11,8 +11,7 @@ using TicTacToeApi.Validation;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure Kestrel to use PORT environment variable (required for Render.com)
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
 builder.WebHost.ConfigureKestrel(serverOptions =>
 {
     serverOptions.ListenAnyIP(int.Parse(port));

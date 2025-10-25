@@ -9,11 +9,11 @@ services:
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
-# IMPORTANT: Replace with your actual frontend URL after deployment
+      # IMPORTANT: Replace with your actual frontend URL after deployment
       - key: AllowedOrigins__0
         value: https://your-frontend-app.onrender.com
-  # Add additional origins as needed:
+      # Add additional origins as needed:
       # - key: AllowedOrigins__1
-   #   value: https://another-domain.com
+      #   value: https://another-domain.com
     # Optional: Add health check (SignalR negotiate endpoint)
     # healthCheckPath: /gameHub/negotiate

@@ -18,7 +18,7 @@ COPY ["TicTacToeApi/TicTacToeApi.csproj", "TicTacToeApi/"]
 RUN dotnet restore "TicTacToeApi/TicTacToeApi.csproj"
 
 # Copy everything else and build
-COPY . .
+COPY TicTacToeApi/. TicTacToeApi/
 WORKDIR "/src/TicTacToeApi"
 RUN dotnet build "TicTacToeApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
 

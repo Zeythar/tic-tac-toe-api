@@ -4,7 +4,7 @@ services:
     runtime: docker
     region: oregon # Change to your preferred region (oregon, frankfurt, singapore, etc.)
     plan: free # or 'starter', 'standard', etc.
-    dockerfilePath: ./TicTacToeApi/Dockerfile
+    dockerfilePath: TicTacToeApi/Dockerfile
     dockerContext: .
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
